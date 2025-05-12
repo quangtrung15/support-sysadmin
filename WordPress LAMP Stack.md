@@ -1,0 +1,108 @@
+# Triển khai ứng dụng web trên Ubuntu LAMP Stack
+## 1.LAMP
+- LAMP là viết tắt của Linux, Apache, MySQL và PHP. Các thành phần này, được sắp xếp theo các lớp hỗ trợ lẫn nhau, tạo thành các stack phần mềm. Các website và ứng dụng web chạy trên nền tảng của các stack cơ bản này.
+  - Linux: là lớp đầu tiên trong stack. Hệ điều hành này là cơ sở nền tảng cho các lớp phần mềm khác.
+  - Apache: Lớp thứ hai bao gồm phần mềm web server, thường là Apache Web (HTTP) Server. Lớp này nằm trên lớp Linux. Web server chịu trách nhiệm chuyển đổi các web browser sang các website chính xác của chúng. Apache đã (và vẫn) là ứng dụng web server phổ biến nhất trên public Internet hiện nay. Trên thực tế, Apache được ghi nhận là đóng một vai trò quan trọng trong sự phát triển ban đầu của World Wide Web.
+  - MySQL: Lớp thứ ba là nơi cơ sở dữ liệu database được lưu trữ. MySQL lưu trữ các chi tiết có thể được truy vấn bằng script để xây dựng một website. MySQL thường nằm trên Linux và cùng với Apache / lớp 2. Trong cấu hình highend, MySQL có thể được off load xuống 1 máy chủ lưu trữ riêng biệt.
+  - PHP: là lớp trên cùng của stack. Lớp script bao gồm PHP và / hoặc các ngôn ngữ lập trình web tương tự khác. Các website và ứng dụng web chạy trong lớp này.
+## 2.Cài đặt
+- **Thực hiện triển khai cài LAMP Stack trên Ubuntu 22.04**
+  - Cập nhật ubuntu
+  - ```bash
+    sudo apt update && sudo apt upgrade -y
+    ```
+  - ![image](https://github.com/user-attachments/assets/06b5bd55-b042-4c26-9a7b-6c3813c6afa0)
+- **Cài đặt Apache Webserver**
+  - ```bash
+    sudo apt install apache2 -y
+    ```
+  - ![image](https://github.com/user-attachments/assets/e5ceacd7-a8e8-411d-bbc5-9a2712431486)
+  - Kiểm tra xem cài đặt thành công chưa, mở trình duyệt truy cập: http://<IP-của-Ubuntu>
+  - ![image](https://github.com/user-attachments/assets/0d9bf519-116d-472f-ae73-844de3232703)
+- **Cài đặt MySQL**
+  - ```bash
+    sudo apt install mysql-server -y
+    ```
+  - ![image](https://github.com/user-attachments/assets/e458a0b6-2851-4fca-8ade-bbb37a36e6c3)
+  - Cài đặt bảo mật
+  - ```bash
+    sudo mysql_secure_installation
+    ```
+- **Cài PHP + module cần thiết**
+  - ```
+    sudo apt install php libapache2-mod-php php-mysql php-curl php-xml php-gd php-mbstring -y
+    ```
+  - ![image](https://github.com/user-attachments/assets/8c5cd6f7-4144-4101-a7bf-59e05baed888)
+  - Kiểm tra xem PHP đã cài thành công chưa
+  - ```bash
+    php -v
+    ```
+  - ![image](https://github.com/user-attachments/assets/f38e140d-9780-46d0-9790-a83e7f20aada)
+- **Cài đặt WordPress**
+  - Tạo database cho WordPress
+  - ```bash
+    sudo mysql -u root -p
+    ```
+  - ![image](https://github.com/user-attachments/assets/6dd2a337-e06e-4768-984f-4918b73baefb)
+  - ```sql
+    CREATE DATABASE wordpress_db DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+    CREATE USER 'wp_user'@'localhost' IDENTIFIED BY 'Qaz123456@';
+    GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wp_user'@'localhost';
+    FLUSH PRIVILEGES;
+    EXIT;
+    ```
+  - ![image](https://github.com/user-attachments/assets/35576af3-be94-4f8c-a514-5a847be82778)
+  - Tải WordPress
+  - ```bash
+    cd /tmp
+    wget https://wordpress.org/latest.tar.gz
+    tar -xvzf latest.tar.gz
+    ```
+  - ![image](https://github.com/user-attachments/assets/260b15fa-5134-45cc-9436-39741e066400)
+  - Di chuyển vào thư mục web
+  - ```bash
+    sudo rm -rf /var/www/html/*
+    sudo mv wordpress/* /var/www/html/
+    ```
+  - ![image](https://github.com/user-attachments/assets/851ba453-3cb9-444b-a447-43d321df72d8)
+  - Cấp quyền thư mục
+  - ```bash
+    sudo chown -R www-data:www-data /var/www/html
+    sudo chmod -R 755 /var/www/html
+    ```
+  - ![image](https://github.com/user-attachments/assets/0cd6277b-8b82-41ac-95ef-f83575dd3e9c)
+  - Tạo file cấu hình WordPress
+  - ```bash
+    sudo cp wp-config-sample.php wp-config.php
+    ```
+  - ![image](https://github.com/user-attachments/assets/a054a5ee-f980-45b2-972d-4084cfe58196)
+  - Sửa wp-config.php
+  - ```bash
+    sudo nano wp-config.php
+    ```
+  - ![image](https://github.com/user-attachments/assets/07ff0a3c-df45-44f8-915c-fff500466307)
+  - Khởi động lại Apache
+  - ```bash
+    sudo systemctl restart apache2
+    ```
+  - ![image](https://github.com/user-attachments/assets/8bba73da-ecfd-4ce3-8412-19b95ea3b7ed)
+- **Kiểm thử**
+  - Mở trình duyệt truy cập: http://<IP-của-Ubuntu>
+  - ![image](https://github.com/user-attachments/assets/5f7a8c20-f9ab-4f97-a8b7-358d7950409a)
+  - ![image](https://github.com/user-attachments/assets/81935e74-a329-428c-b22b-9a505b329a83)
+  - ![image](https://github.com/user-attachments/assets/bbaca275-bd81-481c-8e8f-bc7b1b0c963e)
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
