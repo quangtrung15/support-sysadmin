@@ -1,11 +1,12 @@
 # Triển khai ứng dụng web trên Ubuntu LAMP Stack
 ## 1.LAMP
+### 1.1.LAMP là gì?
 - LAMP là viết tắt của Linux, Apache, MySQL và PHP. Các thành phần này, được sắp xếp theo các lớp hỗ trợ lẫn nhau, tạo thành các stack phần mềm. Các website và ứng dụng web chạy trên nền tảng của các stack cơ bản này.
   - Linux: là lớp đầu tiên trong stack. Hệ điều hành này là cơ sở nền tảng cho các lớp phần mềm khác.
   - Apache: Lớp thứ hai bao gồm phần mềm web server, thường là Apache Web (HTTP) Server. Lớp này nằm trên lớp Linux. Web server chịu trách nhiệm chuyển đổi các web browser sang các website chính xác của chúng. Apache đã (và vẫn) là ứng dụng web server phổ biến nhất trên public Internet hiện nay. Trên thực tế, Apache được ghi nhận là đóng một vai trò quan trọng trong sự phát triển ban đầu của World Wide Web.
   - MySQL: Lớp thứ ba là nơi cơ sở dữ liệu database được lưu trữ. MySQL lưu trữ các chi tiết có thể được truy vấn bằng script để xây dựng một website. MySQL thường nằm trên Linux và cùng với Apache / lớp 2. Trong cấu hình highend, MySQL có thể được off load xuống 1 máy chủ lưu trữ riêng biệt.
   - PHP: là lớp trên cùng của stack. Lớp script bao gồm PHP và / hoặc các ngôn ngữ lập trình web tương tự khác. Các website và ứng dụng web chạy trong lớp này.
-## 2.Cài đặt
+### 1.2.Cài đặt
 - **Thực hiện triển khai cài LAMP Stack trên Ubuntu 22.04**
   - Cập nhật ubuntu
   - ```bash
@@ -91,3 +92,7 @@
   - ![image](https://github.com/user-attachments/assets/5f7a8c20-f9ab-4f97-a8b7-358d7950409a)
   - ![image](https://github.com/user-attachments/assets/81935e74-a329-428c-b22b-9a505b329a83)
   - ![image](https://github.com/user-attachments/assets/bbaca275-bd81-481c-8e8f-bc7b1b0c963e)
+## 2.LEMP
+#### 2.1.LEMP là gì ?
+- Tương tự như LAMP nhưng E ở đây là Nignx
+### 2.2.Cài đặt
