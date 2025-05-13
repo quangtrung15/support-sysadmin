@@ -96,3 +96,39 @@
 #### 2.1.LEMP là gì ?
 - Tương tự như LAMP nhưng E ở đây là Nignx
 ### 2.2.Cài đặt
+- **Cài đặt Nginx**
+  - ```bash
+    sudo apt update
+    sudo apt install nginx
+    ```
+  - ![image](https://github.com/user-attachments/assets/83d520d7-d7b5-4306-9805-6c47e3452ee3)
+  - Nếu như đã cấu hình LAMP thì cần tắt Apache hoặc chuyển Apache sang cổng khác
+  - Tắt Apache
+  - ```bash
+    sudo systemctl stop apache2
+    sudo systemctl disable apache2
+    ```
+  - Thay đổi cổng của Apache (mặc định là 80) trong file cấu hình
+  - ```bash
+    sudo nano /etc/apache2/ports.conf
+    sudo nano /etc/apache2/sites-enabled/000-default.conf
+    ```
+  - ![image](https://github.com/user-attachments/assets/0966e7bd-6cff-4524-972d-c125f9f4177f)
+  - Đổi từ VirtualHost *:80 thành ví dụ *:8080
+  - `sudo systemctl restart apache2`
+- **Cài PHP và module PHP-FPM (cho Nginx)**
+  - Nginx không dùng mod_php như Apache, mà dùng PHP-FPM (FastCGI Process Manager)
+  - `sudo apt install php-fpm php-mysql`
+- **Cấu hình Nginx để xử lý file PHP
+  - `sudo nano /etc/nginx/sites-available/default`
+  - ![image](https://github.com/user-attachments/assets/31ffd0e9-4599-406e-a16c-be879d0fb2c3)
+  - Thêm (hoặc sửa) đoạn sau trong server { ... }:
+  - ```bash
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.1-fpm.sock;  # tùy phiên bản PHP
+    }
+    ```
+  - Kiểm tra cấu hình
+  - `sudo nginx -t`
+  - `sudo systemctl restart nginx`
