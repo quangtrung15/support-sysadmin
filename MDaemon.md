@@ -232,3 +232,17 @@ MDaemon có những tính năng nổi bật như sau.
 	- ![image](https://github.com/user-attachments/assets/906dfaf6-b00a-40c2-95e8-af58e21e5389)
 	- ![image](https://github.com/user-attachments/assets/6baf101d-4924-4852-81da-18b87f407e5c)
 	- ![image](https://github.com/user-attachments/assets/f1eec8dc-46df-48d0-98d0-1f1eea15e628)
+### 2.2.9 Phân quyền cho tài khoản thành admin của domain
+- ![image](https://github.com/user-attachments/assets/420da191-8d01-4153-820f-6421bc12811c)
+- ![image](https://github.com/user-attachments/assets/141b940f-d156-4fb9-9e68-bdfc4fb2b08e)
+### 2.2.10 Kiểm tra log gửi/nhận email (đặc biệt chú ý)
+- Có thể kiểm tra log gửi nhận tại phần panel bên phải
+- ![image](https://github.com/user-attachments/assets/97a52fa7-00eb-403e-ad9b-629e6698b341)
+### 2.2.11.Tìm hiểu thêm về Dynamic screening trong Security của Mdaemon
+- ![image](https://github.com/user-attachments/assets/a185a305-7388-4571-8849-b45a4b824fe8)
+- ![image](https://github.com/user-attachments/assets/00c371ca-27f6-49eb-ba85-f835b2ed28a0)
+- 
+
+
+
+
