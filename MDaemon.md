@@ -91,6 +91,70 @@
   - Test login webmail với account, domain mới tạo. Truy cập web mail tại https://mail.qtrung.vn/
   - ![image](https://github.com/user-attachments/assets/59053359-c7c2-4866-9008-1f1ddd7106fe)
   - ![image](https://github.com/user-attachments/assets/73a097d3-6141-4ad7-9f28-91da8a9ff7f9)
+- Tạo user
+  - Click chọn User Manager để mở trình quản lý user.
+  - ![image](https://github.com/user-attachments/assets/93b55add-cee6-4ff3-955e-ce6ffca0bc68)
+  - Click New để tạo user mới
+  - ![image](https://github.com/user-attachments/assets/bfd08b83-5276-4665-a913-7dcb2b579f90)
+  - ![image](https://github.com/user-attachments/assets/4925982c-28a4-4dbf-a2f5-9e924f3f8960)
+  - Tạo thành công
+  - ![image](https://github.com/user-attachments/assets/1d68fa1f-91cf-4b29-8b91-1dac2ea92735)
+  - Kiểm tra đăng nhập trên webmail
+  - ![image](https://github.com/user-attachments/assets/6a25aa0a-2000-4884-87d1-3756ce52dc3e)
+  - ![image](https://github.com/user-attachments/assets/942f7416-8e65-4352-b250-0bf093fb95db)
+- Tạo group
+  - Tại phần Accounts chọn Group&Templates ...
+  - ![image](https://github.com/user-attachments/assets/d94343ad-766a-45c9-8b75-6a05178c417a)
+  - Chọn New để tạo group mới
+  - ![image](https://github.com/user-attachments/assets/28c5a162-6cc5-45be-b7d7-8776bd7bbea2)
+  - ![image](https://github.com/user-attachments/assets/2cfaf8e3-599b-4d68-a2f4-14ca05d04e4a)
+  - Chọn Add or remove Accounts ... để thêm thành viên vào nhóm
+  - ![image](https://github.com/user-attachments/assets/fef31966-6163-487f-adf6-be0cf30f2643)
+  - ![image](https://github.com/user-attachments/assets/5c7e21b2-a2e5-4eb6-a257-0a9cbaab7601)
+  - ![image](https://github.com/user-attachments/assets/0d3ddcea-56de-425a-9ade-38d349097fab)
+- Tạo Alias
+  - Click chọn User Manager để mở trình quản lý user.
+  - Chọn user cần thêm Alias và click edit
+  - ![image](https://github.com/user-attachments/assets/dfa6b25f-14c5-49c9-8a8a-ea97f644c7f8)
+  - ![image](https://github.com/user-attachments/assets/74cb5257-e487-499a-85af-611efc260b35)
+  - Test gửi mail từ trung12@qtrung.vn tới aliases@qtrung.vn kiểm tra demo@qtrung.vn có nhận mail.
+  - ![image](https://github.com/user-attachments/assets/389314ac-2529-4a9a-b218-2a1acf239a81)
+  - ![image](https://github.com/user-attachments/assets/78868b86-cab1-47ca-b4d7-c1498c1ef0e0)
+- Tạo Mailing lists email (một danh sách nhiều địa chỉ email được sử dụng để gửi cùng tới 1 nhóm người.)
+  - Chọn icon Mailing lists Manager
+  - ![image](https://github.com/user-attachments/assets/04abe371-e909-4cc5-baa2-e73a779fc14a)
+  - Chọn New List và cấu hình mailbox
+  - ![image](https://github.com/user-attachments/assets/efa51c01-94bb-43a5-85f3-ed0d987f3f0a)
+  - Thêm user vào Mailling lists tại tab Members chọn Add. Thêm 2 user như trong hình để test
+  - ![image](https://github.com/user-attachments/assets/4941bf0c-8ebb-48da-81b0-a2cb4ad31349)
+  - ![image](https://github.com/user-attachments/assets/e336413b-de3c-4a60-bb3b-0e5f59e964f8)
+  - Test gửi mail từ trung15@qtrung.com tới ads@qtrung.vn kiểm tra demo@qtrung.vn và trung12@qtrung.vn có nhận mail.
+  - ![image](https://github.com/user-attachments/assets/e2d82f9e-b3e1-4ba6-92b4-d45e3e2d509e)
+  - ![image](https://github.com/user-attachments/assets/d679c25c-6c42-4a11-a996-ec0058de1112)
+  - ![image](https://github.com/user-attachments/assets/ed4a9d1d-f988-4017-b814-8be7c4ee5528)
+### 2.2.4.Thiết lập chính sách về mật khẩu account email
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
