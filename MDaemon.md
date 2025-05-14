@@ -1,3 +1,17 @@
+# 1.Tổng quan
+- MDaemon là một phần mềm máy chủ mail và cộng tác dành cho doanh nghiệp trên hệ điều hành Windows, được phát triển bởi Alt-N. Phần mềm được ra mắt lần đầu vào năm 1996 và đã trở thành một giải pháp phổ biến cho việc quản lý email, lịch làm việc, danh bạ và các tính năng cộng tác trong môi trường doanh nghiệp.
+- MDaemon Mail Server là lựa chọn thay thế hợp lý cho Exchange Mail Server nhờ khả năng linh hoạt, đơn giản khi cấu hình, cài đặt.
+- Tính năng của MDaemon 
+MDaemon có những tính năng nổi bật như sau.
+	* Email Server: Máy chủ mail MDaemon cung cấp các tính năng email đầy đủ, bao gồm hỗ trợ các giao thức IMAP, SMTP và POP3. Máy chủ này có thiết kế thân thiện với người dùng và hiệu suất ổn định, đáp ứng nhu cầu của các doanh nghiệp vừa và nhỏ.
+	* Tính năng bảo mật nâng cao: Hệ thống MDaemon sử dụng nhiều lớp bảo mật để bảo vệ máy chủ khỏi các cuộc tấn công. Các lớp bảo mật này bao gồm kiểm soát chuyển tiếp, IP Shielding, SMTP Authentication, tra cứu ngược, xác thực email Vouch By Reference (VBR), xác nhận và ký hiệu thư DKIM, chống thư rác, SSL/TLS, bảo vệ backscatter và SecurityPlus.
+	* Tính năng mã hóa Email: MDaemon cung cấp các tính năng mã hóa mạnh mẽ cho cả máy khách và máy chủ. Người dùng WorldClient có thể mã hóa email và tệp đính kèm của mình trong trình đơn cài đặt WorldClient. Quản trị viên có thể sử dụng OpenPGP để mã hóa, giải mã và quản lý khóa email trên máy chủ.
+	* Khả năng lưu trữ lớn: MDaemon cung cấp khả năng lưu trữ email dung lượng lớn, giúp người dùng dễ dàng bảo vệ thông điệp email của mình theo yêu cầu pháp lý và chính sách công nghệ thông tin của doanh nghiệp.
+	* Quản trị từ xa: MDaemon cung cấp cho quản trị viên khả năng quản trị từ xa toàn diện, cho phép họ truy cập và quản lý tất cả các tính năng của máy chủ từ bất kỳ máy tính nào có trình duyệt web và kết nối Internet. Điều này bao gồm các tác vụ như thêm hoặc chỉnh sửa tài khoản, chỉnh sửa thư, khắc phục sự cố gửi thư và hơn thế nữa. Quản trị viên từ xa thậm chí có thể truy cập MDaemon thông qua kết nối an toàn bằng HTTPS.
+	* Ngoài ra, MDaemon còn cung cấp tính năng quản lý thiết bị di động, cho phép người dùng truy cập email, lịch, danh bạ và tác vụ của họ từ bất kỳ thiết bị di động nào. MDaemon tương thích với nhiều thiết bị di động phổ biến, vì vậy người dùng có thể truy cập thông tin quan trọng của họ ở mọi nơi, mọi lúc.
+	* WorldClient (Web-Based Email): WorldClient của MDaemon là nền tảng email web thân thiện với người dùng, cung cấp đầy đủ các tính năng cần thiết cho doanh nghiệp vừa và nhỏ. Tính năng này cho phép người dùng cộng tác hiệu quả bằng cách chia sẻ thư mục email, lịch, danh bạ, danh sách công việc, nhiệm vụ và ghi chú. Người dùng có thể truy cập tất cả dữ liệu này từ bất kỳ đâu có kết nối Internet và trình duyệt web.
+	* Tính năng WorldClient Instant Messenger: WorldClient Instant Messenger là ứng dụng nhắn tin tức thì miễn phí đi kèm với MDaemon, cung cấp các tính năng IM, ghi nhật ký, chia sẻ tệp, trò chuyện nhóm, đồng bộ hóa sổ địa chỉ và thông báo email để giúp người dùng truy cập nhanh vào các tính năng của WorldClient.
+	* Khả năng di chuyển Exchange: Di chuyển email từ máy chủ này sang máy chủ khác có thể là một quá trình phức tạp, nhưng MDaemon Messaging Server giúp việc này dễ dàng hơn nhiều. Tính năng MDMigrator tích hợp của MDaemon cho phép bạn di chuyển dữ liệu của mình từ Exchange sang MDaemon chỉ với một vài bước đơn giản. Điều này giúp bạn có thể chuyển sang MDaemon nhanh chóng và dễ dàng, với thời gian ngừng hoạt động tối thiểu.
 # 2.Cài đặt và sử dụng
 ## 2.1.Cài đặt
 - Download Mdaemon
@@ -133,45 +147,20 @@
   - ![image](https://github.com/user-attachments/assets/d679c25c-6c42-4a11-a996-ec0058de1112)
   - ![image](https://github.com/user-attachments/assets/ed4a9d1d-f988-4017-b814-8be7c4ee5528)
 ### 2.2.4.Thiết lập chính sách về mật khẩu account email
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Tại phần Accounts chọn Accounts Settings
+- ![image](https://github.com/user-attachments/assets/929c3e7f-4086-4143-a338-4b3830b5f32a)
+- Tại phần Others -> Password đây là nơi cấu hình chính sách mật khẩu
+- ![image](https://github.com/user-attachments/assets/7d4f0518-356d-45d7-bc2d-a3d2ca3338cf)
+### 2.2.5 Thiết lập chữ ký email
+- Truy cập web mail tại http://mail.qtrung.com/ Chọn icon bánh răng góc trên bên phải
+- ![image](https://github.com/user-attachments/assets/810b9c29-a73b-43df-8ef6-3361e150f42f)
+- ![image](https://github.com/user-attachments/assets/87fd6f12-f0bc-4c3e-9a5a-e30fff87e15e)
+- ![image](https://github.com/user-attachments/assets/495163f7-63e8-496c-842b-aa6dd83e0500)
+- ![image](https://github.com/user-attachments/assets/cf9d1ef4-e00a-4994-8953-13eda04d9207)
+- ![image](https://github.com/user-attachments/assets/794dd205-5d46-435e-a40c-aa90fd4cd1ec)
+- Chữ ký đã được áp dụng
+- ![image](https://github.com/user-attachments/assets/b39a7a67-9eb6-409c-8745-c4ba8e391fbc)
+- 
 
 
 
