@@ -36,6 +36,70 @@
   - ![image](https://github.com/user-attachments/assets/eaac6e0b-2219-4f34-bf43-4e3e9354b887)
   - ![image](https://github.com/user-attachments/assets/dcf175b8-96d5-497a-8fd8-7905d678896b)
   - ![image](https://github.com/user-attachments/assets/e925b5d2-6248-4d8a-88bd-8169b2ee4d97)
+## 2.2.Sử dụng
+### 2.2.1 Truy cập admin và enduser
+- Admin
+- Truy cập web admin tại http://localhost:1000/
+  - ![image](https://github.com/user-attachments/assets/1fb0492a-e132-4e52-813b-74b694fe31ee)
+  - ![image](https://github.com/user-attachments/assets/32e79e25-d3fb-4dde-b266-1586c6e3e41c)
+- Enduser
+  - Truy cập web mail tại http://mail.qtrung.com/
+  - ![image](https://github.com/user-attachments/assets/1c491ac8-1427-4d91-aff1-a0006735b571)
+### 2.2.2 Các port cần thiết được sử dụng trên email server Mdaemon
+- ```bash
+  - SMTP inbound / outbound port - 25
+  - MSA inbound port - 587
+  - ODMR inbound port - 366
+  - SMTP SSL port - 465
+  - ActiveSync port - 80
+  - ActiveSync SSL port - 443
+  - POP3 inbound / outbound port - 110
+  - IMAP inbound port - 143
+  - POP3 SSL port - 995
+  - IMAP SSL port - 993
+  - DNS outbound port - 53
+  - Remote Administration port - 1000
+  - Remote Administration SSL port - 444
+  - WorldClient port - 3000
+  - WorldClient SSL port - 443
+  - Minger port - 4069
+  - XMPP port - 5222
+  - XMPP SSL port - 5223
+  - BOSH port (Webmail IM) - 7070
+  - BOSH SSL port (for Webmail IM) - 7443
+  ```
+### 2.2.3 Khởi tạo domain, user, group, Alias, Mailing lists email
+- Khởi tạo Domain
+  - Trên WindowsServer mở Open MDaemon Configuration Session
+  - ![image](https://github.com/user-attachments/assets/47d636d9-d287-49c5-a8e0-7c753e34f2c4)
+  - Chọn icon Domain Manager
+  - ![image](https://github.com/user-attachments/assets/6fe92dca-291f-4c22-b3fa-9c087283b888)
+  - Click chọn New Domain để khởi tạo Domain mới.
+  - ![image](https://github.com/user-attachments/assets/6481b567-7e26-4e74-91c1-a6e0738126d7)
+  - ![image](https://github.com/user-attachments/assets/1c6fa11e-46f9-4e50-bc05-aae48c02b865)
+  - Cấu hình hostname
+  - ![image](https://github.com/user-attachments/assets/d35d0b5b-2318-4a6d-8195-378bddcc4ebe)
+  - Thêm user để test tại phần accounts
+  - ![image](https://github.com/user-attachments/assets/d9eac888-143e-4f93-a354-2d985166ab71)
+  - ![image](https://github.com/user-attachments/assets/6bbcc741-0a93-47cc-bd6f-a7f85da778df)
+  - ![image](https://github.com/user-attachments/assets/55296ad5-c256-4f2b-a186-56604bf8dd89)
+  - Chỉnh sửa file hosts C:\Windows\System32\drivers\etc\hosts thêm dòng
+  - ```bash
+    192.168.88.153	mail.qtrung.vn
+    ```
+  - ![image](https://github.com/user-attachments/assets/8a653804-7bab-488f-952a-acfb9e295755)
+  - Test login webmail với account, domain mới tạo. Truy cập web mail tại https://mail.qtrung.vn/
+  - ![image](https://github.com/user-attachments/assets/59053359-c7c2-4866-9008-1f1ddd7106fe)
+  - ![image](https://github.com/user-attachments/assets/73a097d3-6141-4ad7-9f28-91da8a9ff7f9)
+
+
+
+
+
+
+
+
+
 
 
 
