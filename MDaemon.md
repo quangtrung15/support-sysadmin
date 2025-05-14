@@ -164,7 +164,7 @@ MDaemon có những tính năng nổi bật như sau.
 ### 2.2.7 Tìm hiểu về Content Filter: Spam, Antivirus, Attach Fillters, Message Filters
 * Content Filter (Bộ lọc nội dung)
 	- Bộ lọc nội dung (Security » Content Filter) có thể được sử dụng cho nhiều mục đích như: ngăn chặn thư rác, chặn các tin nhắn có chứa vi-rút trước khi chúng đến đích cuối cùng, sao chép một số email nhất định cho một hoặc nhiều người dùng khác, thêm ghi chú hoặc tuyên bố từ chối trách nhiệm vào cuối tin nhắn, thêm và xóa tiêu đề, xóa tệp đính kèm email, xóa tin nhắn, v.v. Vì các quy tắc Bộ lọc nội dung riêng lẻ được quản trị viên tạo ra và do tính đa dạng của chúng, chúng có thể được sử dụng trong nhiều tình huống và phần lớn chỉ bị giới hạn bởi tính sáng tạo của người tạo ra chúng.
-		![images](./images/content-filter_rules.png)
+		![image](https://github.com/user-attachments/assets/0630a79d-bef9-47a7-ad54-f107b4f3b5e5)
 	- Tất cả các tin nhắn được MDaemon xử lý sẽ tạm thời nằm trong một trong các hàng đợi tin nhắn tại một thời điểm nào đó. Khi Lọc nội dung được bật, trước khi bất kỳ tin nhắn nào được phép rời khỏi hàng đợi, trước tiên nó sẽ được xử lý thông qua các quy tắc Lọc nội dung. Kết quả của quy trình này sẽ xác định những gì được thực hiện với tin nhắn.Các tin nhắn có tên tệp bắt đầu bằng chữ cái "P" sẽ bị quy trình lọc nội dung bỏ qua. Mọi tin nhắn khác sẽ được xử lý thông qua hệ thống lọc nội dung. Sau khi xử lý, MDaemon sẽ thay đổi ký tự đầu tiên của tên tệp thành "P". Theo cách này, một tin nhắn sẽ chỉ được xử lý thông qua hệ thống lọc nội dung một lần.
 	- Content Filtering Rules (Quy tắc lọc nội dung)
 		- Enable rules processing engine Bật công cụ xử lý quy tắc: Nhấp vào hộp kiểm này để bật lọc nội dung. Tất cả các tin nhắn được MDaemon xử lý sẽ được lọc thông qua các quy tắc lọc nội dung trước khi được gửi.
@@ -178,7 +178,7 @@ MDaemon có những tính năng nổi bật như sau.
 		- Move down Di chuyển xuống: Nhấp vào nút này để di chuyển quy tắc đã chọn xuống.
 
 	- Creating a New Content Filter Rule (Tạo quy tắc lọc nội dung mới)
-		![images](./images/content-filter_rules_create-rule.png)
+		![image](https://github.com/user-attachments/assets/cbe7b2d6-b0d9-4bf3-b01f-305b09c4cd03)
 		- Thông tin cấu hình gồm có tên rule, điều kiện thực hiện (Conditions), hành động thực hiện (actions)
 		- Một số Conditions
 			- If the [HEADER] contains: Nếu header chứa văn bản hay biểu thức cụ thể thì actions 
@@ -202,28 +202,29 @@ MDaemon có những tính năng nổi bật như sau.
 	- Địa chỉ có thể được phép hoặc bị chặn hoặc được chỉ định là hoàn toàn miễn kiểm tra Bộ lọc thư rác. Bạn có thể chèn báo cáo thư rác vào thư, hiển thị điểm thư rác và cách đạt được điểm đó hoặc bạn có thể tạo báo cáo dưới dạng email riêng và đính kèm thư rác gốc dưới dạng tệp đính kèm. Ngoài ra, bạn thậm chí có thể sử dụng phương pháp học Bayesian để giúp Bộ lọc thư rác học cách xác định thư rác chính xác hơn theo thời gian, do đó tăng độ tin cậy của nó.
 	- Cuối cùng, bằng cách kiểm tra hàng nghìn thư rác đã biết, các quy tắc đã được tối ưu hóa theo thời gian và rất đáng tin cậy trong việc phát hiện dấu vân tay của thư rác. Tuy nhiên, bạn có thể tùy chỉnh hoặc thêm các quy tắc mới bằng cách chỉnh sửa các tệp cấu hình của Bộ lọc thư rác để đáp ứng nhu cầu cụ thể của mình.
 	- Bộ lọc thư rác của MDaemon sử dụng công nghệ heuristic mã nguồn mở phổ biến, tích hợp. Trang chủ của dự án mã nguồn mở là: [spamassassin](http://www.spamassassin.org)
-	![images](./images/spam-filter_spam-filter.png)
+	![image](https://github.com/user-attachments/assets/a22d25f9-ac09-4857-b9d2-69b8679eb2eb)
 		- Enable Spam Filter Bật Bộ lọc thư rác: Đánh dấu vào ô này để kích hoạt hệ thống chấm điểm thư theo phương pháp heuristic, lọc thư rác. Không có tùy chọn Bộ lọc thư rác nào khác trên màn hình này khả dụng cho đến khi tùy chọn này được bật.
 		- A message is spam if its score is greater or equal to [xx] (0.0-500.0): Giá trị bạn chỉ định ở đây là ngưỡng thư rác bắt buộc mà MDaemon sẽ so sánh với điểm thư rác của từng thư. Bất kỳ thư nào có điểm thư rác lớn hơn hoặc bằng số tiền này sẽ được coi là thư rác và sau đó các hành động thích hợp sẽ được thực hiện dựa trên các cài đặt Bộ lọc thư rác khác của bạn.
 		- SMTP rejects messages with scores greater or equal to [xx] (0=never):Sử dụng tùy chọn này để chỉ định ngưỡng từ chối điểm thư rác. Khi điểm thư rác của một thư lớn hơn hoặc bằng điểm này, thư sẽ bị từ chối hoàn toàn thay vì tiếp tục qua các tùy chọn còn lại và có thể được gửi đi. Giá trị của tùy chọn này luôn phải lớn hơn giá trị của tùy chọn "Một thư là thư rác nếu điểm của nó..." ở trên.
 	- Ngoài ra MDaemon còn hỗ trợ phương pháp học Bayesian, đây là một quy trình thống kê có thể tùy chọn được sử dụng để phân tích các thư rác và không phải thư rác nhằm tăng độ tin cậy của việc nhận dạng thư rác theo thời gian.	
-		![images](./images/spam-filter_bayesian.png)
+		![image](https://github.com/user-attachments/assets/2a1a8a76-4add-4c94-9fdb-f3edd1e48a80)
 	- Các tuỳ chọn cấu hình `Allow List`
-		![images](./images/spam-filter_white-list-automatic.png)
+		![image](https://github.com/user-attachments/assets/d102e05c-209b-4001-aff9-5bab6f15339f)
 	- Các tuỳ chọn cấu hình `Block List`
-		![images](./images/spam-filter_black-list-by-sender.png)
+		![image](https://github.com/user-attachments/assets/dbd461b0-b3e0-43bc-961f-f75965c74a7e)
 	- Cập nhật bộ lọc 
-		![images](./images/spam-filter_updates.png)
+		![image](https://github.com/user-attachments/assets/443e3178-5927-4bb6-9a22-69e5189f4479)
+
 	- Spam Honeypots (nằm tại Security » Spam Filter » Spam Honeypots) dùng để chỉ định các địa chỉ email cục bộ được thiết kế có chủ đích để thu thập thư rác. Các honeypots thư rác này không phải là tài khoản MDaemon hợp lệ hoặc bí danh địa chỉ và không bao giờ được sử dụng để gửi hoặc nhận email hợp lệ. Tuy nhiên, bằng cách đăng địa chỉ honeypot lên nhóm tin tức, danh sách gửi thư công khai hoặc nguồn khác mà những kẻ gửi thư rác thường khai thác địa chỉ, bạn sẽ bắt đầu thấy các thư đến được gửi đến các honeypots thư rác — bạn cũng có thể lấy địa chỉ từ các thư rác khác mà bạn đã nhận được được gửi đến các địa chỉ cục bộ không hợp lệ khác.
-		![images](./images/spam-honeypots.png)
+		![image](https://github.com/user-attachments/assets/edcbb881-63a5-4876-9d32-004db362d69d)
 * Antivirus Filter 
 	- MDaemon có hỗ trợ antivirus filter cấu hình trong (Security » Content Filter)
-		![images](./images/content-filter_antivirus.png)
+		![image](https://github.com/user-attachments/assets/5cdb9394-c43f-467c-8e19-04a3b0764b40)
 	- Tại đây có thể cấu hình bật tắt lọc, Exclude gateways trong quá trình quét, Cấu hình Exclude, Cấu hình xử lý khi virus được phát hiện.
 	- MDaemon AntiVirus được trang bị hai công cụ quét virus: ClamAV và IKARUS Anti-Virus. Khi cả hai đều được bật, tin nhắn sẽ được quét bởi cả hai công cụ; đầu tiên là IKARUS Anti-Virus và sau đó là ClamAV. Điều này cung cấp một lớp bảo vệ bổ sung, vì một công cụ có khả năng xác định được virus trước khi định nghĩa virus của công cụ kia được cập nhật.
 * Attach Fillters 
 	- Nằm trong Content Filter 
-		![images](./images/content-filter_attachments.png)
+		![image](https://github.com/user-attachments/assets/8b7b0afa-d108-42c0-80e0-9f6b41acdfdf)
 	- Sử dụng tab này để chỉ định các tệp đính kèm mà bạn muốn phân loại là được phép hoặc bị hạn chế. Các tệp đính kèm không được phép sẽ tự động bị xóa khỏi tin nhắn.
 	- Gồm các cấu hình handling attachments: Do not extract attachments from messages, Extract attachments and put them in account's Documents folder, Use Attachment Linking feature và Edit Attachment Linking settings
 ### 2.2.8.Đổi mật khẩu account admin global, admin domain
@@ -241,8 +242,32 @@ MDaemon có những tính năng nổi bật như sau.
 ### 2.2.11.Tìm hiểu thêm về Dynamic screening trong Security của Mdaemon
 - ![image](https://github.com/user-attachments/assets/a185a305-7388-4571-8849-b45a4b824fe8)
 - ![image](https://github.com/user-attachments/assets/00c371ca-27f6-49eb-ba85-f835b2ed28a0)
-- 
+- Khi sử dụng Dynamic Screening, MDaemon có thể theo dõi hành vi của các kết nối đến để xác định hoạt động đáng ngờ và sau đó phản hồi tương ứng. Bạn có thể chặn một địa chỉ IP (hoặc phạm vi địa chỉ) kết nối khi địa chỉ này không xác thực được một số lần nhất định trong một khoảng thời gian nhất định. Bạn cũng có thể chặn các tài khoản đang cố gắng xác thực khi chúng không xác thực được quá nhiều lần và quá nhanh. Ngoài ra, khi một địa chỉ IP hoặc tài khoản bị chặn, thì việc chặn đó không phải là vĩnh viễn. Địa chỉ IP hoặc tài khoản đang kết nối sẽ bị chặn trong số phút, giờ hoặc ngày mà bạn chỉ định và chúng có thể được quản trị viên bỏ chặn thủ công.
+- Bật dịch vụ Dynamic Screening đánh dấu vào ô `Enable the Dynamic Screening service` để bật dịch vụ Dynamic Screening. Bạn cũng có thể bật/tắt dịch vụ trong phần Máy chủ trong ngăn điều hướng của giao diện người dùng chính của MDaemon.
+- Tùy chọn hệ thống
+	- Bật theo dõi lỗi xác thực: Khi tùy chọn này được bật, dịch vụ Dynamic Screening sẽ theo dõi lỗi xác thực đối với các giao thức được chỉ định trên tab Giao thức và thực hiện các hành động được xác định bởi các tùy chọn trên tab Theo dõi lỗi xác thực. Tùy chọn này được bật theo mặc định.
+	- Bật Danh sách chặn sàng lọc động: Tùy chọn này bật khả năng chặn địa chỉ IP và phạm vi của dịch vụ sàng lọc động. Bạn có thể quản lý danh sách chặn từ tab Danh sách chặn động. Tùy chọn danh sách chặn được bật theo mặc định.
+	- Bật Danh sách cho phép sàng lọc động: Tùy chọn này bật tính năng Danh sách cho phép động của dịch vụ sàng lọc động, bạn có thể sử dụng tính năng này để miễn trừ địa chỉ IP và phạm vi, nhằm loại trừ chúng khỏi sàng lọc động. Danh sách cho phép được bật theo mặc định.
+	- Chặn vi phạm chính sách đăng nhập: Theo mặc định, MDaemon yêu cầu tài khoản sử dụng toàn bộ địa chỉ email khi đăng nhập thay vì chỉ sử dụng phần hộp thư trong địa chỉ của họ (ví dụ: họ phải sử dụng "user1@example.com" thay vì chỉ sử dụng "user1"). Điều này được kiểm soát bởi tùy chọn "Máy chủ yêu cầu địa chỉ email đầy đủ để xác thực" trên trang Hệ thống. Khi tùy chọn đó được bật, bạn cũng có thể bật tùy chọn Chặn vi phạm chính sách đăng nhập này nếu bạn muốn chặn bất kỳ địa chỉ IP nào cố gắng đăng nhập mà không sử dụng toàn bộ địa chỉ email. Tùy chọn này bị tắt theo mặc định.
+- Tùy chọn ghi nhật ký nâng cao: 
+	- Ghi dữ liệu lỗi xác thực khi khởi động: Tùy chọn này cho phép ghi tất cả dữ liệu lỗi xác thực hiện đang được Dynamic Screening lưu trữ vào tệp nhật ký khi khởi động. Mặc định, tùy chọn này bị vô hiệu hóa.
+	- Ghi dữ liệu danh sách chặn khi khởi động: Cho phép ghi tất cả dữ liệu danh sách chặn động hiện đang được lưu trữ vào tệp nhật ký khi khởi động. Mặc định, tùy chọn này bị vô hiệu hóa.
+	- Ghi dữ liệu danh sách cho phép khi khởi động: Cho phép ghi tất cả dữ liệu danh sách cho phép động hiện đang được lưu trữ vào tệp nhật ký khi khởi động. Mặc định, tùy chọn này bị vô hiệu hóa.
+	- Ghi dữ liệu vị trí khi có sẵn: Đánh dấu vào hộp này nếu bạn muốn ghi dữ liệu vị trí của từng kết nối, nếu có sẵn.
+	- Ghi vị trí bằng mã ISO-3166: Đánh dấu vào hộp này nếu bạn muốn sử dụng mã quốc gia hai chữ cái ISO-3166 khi ghi vị trí, thay vì sử dụng tên.
+	- Ghi danh sách cho phép: Tùy chọn này thêm một mục vào nhật ký Dynamic Screening mỗi khi có kết nối đến từ một địa chỉ có trong Dynamic Allow List.
+	- Log Block List hits: Tùy chọn này thêm một mục vào nhật ký Dynamic Screening mỗi khi kết nối đến từ một địa chỉ có trong Dynamic Block List.
+	- Log trusted IP list hits: Tùy chọn này thêm một mục vào nhật ký Dynamic Screening mỗi khi kết nối đến từ một địa chỉ Trusted IP.
+	- Log Location Screen hits: Tùy chọn này thêm một mục vào nhật ký Dynamic Screening mỗi khi kết nối đến bị từ chối do Location Screening.
+	- Log failed authentications: Tùy chọn này thêm một mục vào nhật ký Dynamic Screening mỗi khi kết nối đến không xác thực được.
+	- Log successful authentications: Bật tùy chọn này nếu bạn muốn ghi lại mọi nỗ lực xác thực đến thành công. Theo mặc định, tùy chọn này bị tắt.
+	- Log connections allowed: Bật tùy chọn này nếu bạn muốn tạo mục nhật ký cho mọi kết nối vượt qua Dynamic Screening và được phép tiếp tục. Theo mặc định, tùy chọn này bị tắt.
+	- Log connections denied: Tùy chọn này thêm một mục vào nhật ký mỗi khi Dynamic Screening từ chối kết nối đến.
+	- Cấu hình nhật ký khi phát hiện thay đổi: Tùy chọn này thêm mục nhập vào nhật ký cho tất cả các cấu hình Dynamic Screening khi phát hiện thay đổi từ các nguồn bên ngoài (chẳng hạn như chỉnh sửa thủ công tệp INI). Các thay đổi thông thường được ghi lại ở cấp độ Thông tin.
+	- Tóm tắt nhật ký một lần [Hàng ngày | Hàng giờ | Mỗi phút]: Thêm vào nhật ký Dynamic Screening bản tóm tắt về số liệu thống kê Dynamic Screening một lần mỗi ngày, giờ hoặc phút. Theo mặc định, bản tóm tắt được ghi lại hàng giờ.
 
-
-
-
+- Tùy chọn đặt lại dữ liệu sàng lọc
+	- Đặt lại tất cả dữ liệu Lỗi xác thực: Nhấp vào hộp kiểm này nếu bạn muốn xóa tất cả dữ liệu xác thực Kiểm tra động. 
+	- Đặt lại tất cả dữ liệu Danh sách chặn: Nhấp vào hộp kiểm này nếu bạn muốn xóa tất cả dữ liệu Danh sách chặn Kiểm tra động. 
+	- Đặt lại tất cả dữ liệu Danh sách cho phép: Nhấp vào hộp kiểm này nếu bạn muốn xóa tất cả dữ liệu Danh sách cho phép Kiểm tra động. 
+	- Bật các tính năng Giao diện người dùng nâng cao: Đánh dấu vào hộp kiểm này rồi đóng/mở lại giao diện cấu hình MDaemon để thêm một số tính năng Kiểm tra động nâng cao. Màn hình Miễn trừ NAT miền được thêm vào hộp thoại Kiểm tra động, từ đó bạn có thể chỉ định các kết hợp địa chỉ IP/miền cụ thể để miễn chặn Kiểm tra động khi người dùng hợp lệ tại địa chỉ IP đó không xác thực được mật khẩu. Ngoài ra, còn có một số phím tắt Dynamic Screening được thêm vào phần Dynamic Screening của thanh công cụ và một tùy chọn được thêm vào menu phím tắt Dynamic Screening trong phần Servers của giao diện chính cho phép bạn tạm dừng thay vì tắt dịch vụ Dynamic Screening, ngăn không cho máy khách truy cập dịch vụ trong khi bạn quản lý cài đặt của dịch vụ.
