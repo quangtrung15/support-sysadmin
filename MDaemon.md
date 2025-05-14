@@ -160,8 +160,75 @@ MDaemon có những tính năng nổi bật như sau.
 - ![image](https://github.com/user-attachments/assets/794dd205-5d46-435e-a40c-aa90fd4cd1ec)
 - Chữ ký đã được áp dụng
 - ![image](https://github.com/user-attachments/assets/b39a7a67-9eb6-409c-8745-c4ba8e391fbc)
-- 
+### 2.2.6.Thiết lập forward email
+### 2.2.7 Tìm hiểu về Content Filter: Spam, Antivirus, Attach Fillters, Message Filters
+* Content Filter (Bộ lọc nội dung)
+	- Bộ lọc nội dung (Security » Content Filter) có thể được sử dụng cho nhiều mục đích như: ngăn chặn thư rác, chặn các tin nhắn có chứa vi-rút trước khi chúng đến đích cuối cùng, sao chép một số email nhất định cho một hoặc nhiều người dùng khác, thêm ghi chú hoặc tuyên bố từ chối trách nhiệm vào cuối tin nhắn, thêm và xóa tiêu đề, xóa tệp đính kèm email, xóa tin nhắn, v.v. Vì các quy tắc Bộ lọc nội dung riêng lẻ được quản trị viên tạo ra và do tính đa dạng của chúng, chúng có thể được sử dụng trong nhiều tình huống và phần lớn chỉ bị giới hạn bởi tính sáng tạo của người tạo ra chúng.
+		![images](./images/content-filter_rules.png)
+	- Tất cả các tin nhắn được MDaemon xử lý sẽ tạm thời nằm trong một trong các hàng đợi tin nhắn tại một thời điểm nào đó. Khi Lọc nội dung được bật, trước khi bất kỳ tin nhắn nào được phép rời khỏi hàng đợi, trước tiên nó sẽ được xử lý thông qua các quy tắc Lọc nội dung. Kết quả của quy trình này sẽ xác định những gì được thực hiện với tin nhắn.Các tin nhắn có tên tệp bắt đầu bằng chữ cái "P" sẽ bị quy trình lọc nội dung bỏ qua. Mọi tin nhắn khác sẽ được xử lý thông qua hệ thống lọc nội dung. Sau khi xử lý, MDaemon sẽ thay đổi ký tự đầu tiên của tên tệp thành "P". Theo cách này, một tin nhắn sẽ chỉ được xử lý thông qua hệ thống lọc nội dung một lần.
+	- Content Filtering Rules (Quy tắc lọc nội dung)
+		- Enable rules processing engine Bật công cụ xử lý quy tắc: Nhấp vào hộp kiểm này để bật lọc nội dung. Tất cả các tin nhắn được MDaemon xử lý sẽ được lọc thông qua các quy tắc lọc nội dung trước khi được gửi.
+		- Existing Content Filtering Rules Quy tắc lọc nội dung hiện có: Hộp này liệt kê tất cả các quy tắc Lọc nội dung của bạn, với một hộp kiểm bên cạnh mỗi quy tắc để bạn có thể bật/tắt chúng theo ý muốn. Để xem mô tả của bất kỳ quy tắc nào trong định dạng tập lệnh nội bộ của quy tắc đó, hãy nhấp vào quy tắc đó và tạm dừng con trỏ chuột của bạn trên quy tắc đó (di chuyển chuột sẽ khiến mô tả biến mất). Bất cứ khi nào một tin nhắn được xử lý thông qua Bộ lọc nội dung, các quy tắc này sẽ được áp dụng theo thứ tự chúng được liệt kê. Điều này giúp bạn có thể sắp xếp các quy tắc của mình để đạt được mức độ linh hoạt cao hơn.
+			- Ví dụ: Nếu bạn có một quy tắc xóa tất cả các tin nhắn có chứa các từ "Đây là thư rác!" và một quy tắc tương tự gửi các tin nhắn đó đến Người quản lý bưu điện, thì việc sắp xếp chúng theo đúng thứ tự sẽ cho phép áp dụng cả hai quy tắc cho tin nhắn. Điều này giả định rằng không có quy tắc "Dừng xử lý quy tắc" áp dụng cho tin nhắn ở vị trí cao hơn trong danh sách. Nếu có, thì bạn sẽ sử dụng các nút Di chuyển lên/Di chuyển xuống để di chuyển quy tắc "Dừng" xuống bên dưới hai quy tắc kia. Sau đó, bất kỳ tin nhắn nào có chứa "Đây là thư rác!" sẽ được sao chép đến Người quản lý bưu điện rồi xóa.
+		- New Rule Quy tắc mới: Nhấp vào nút này để tạo quy tắc bộ lọc nội dung mới. Thao tác này sẽ mở hộp thoại Tạo quy tắc.
+		- Edit Rule Chỉnh sửa quy tắc: Nhấp vào nút này để mở quy tắc đã chọn trong trình chỉnh sửa Sửa đổi quy tắc.
+		- Copy rule Sao chép quy tắc: Nhấp vào nút này để sao chép quy tắc bộ lọc nội dung đã chọn. Một quy tắc giống hệt sẽ được tạo và thêm vào danh sách. Quy tắc mới sẽ được đặt tên mặc định là "Bản sao của [Tên quy tắc gốc]". Điều này hữu ích nếu bạn muốn tạo nhiều quy tắc tương tự. Bạn có thể tạo một quy tắc duy nhất, sao chép quy tắc đó nhiều lần, sau đó sửa đổi các bản sao khi cần.
+		- Delete rule Xóa quy tắc: Nhấp vào nút này để xóa quy tắc bộ lọc nội dung đã chọn. Bạn sẽ được yêu cầu xác nhận quyết định xóa Quy tắc trước khi MDaemon thực hiện việc đó.
+		- Move up Di chuyển lên: Nhấp vào nút này để di chuyển quy tắc đã chọn lên.
+		- Move down Di chuyển xuống: Nhấp vào nút này để di chuyển quy tắc đã chọn xuống.
 
-
-
-
+	- Creating a New Content Filter Rule (Tạo quy tắc lọc nội dung mới)
+		![images](./images/content-filter_rules_create-rule.png)
+		- Thông tin cấu hình gồm có tên rule, điều kiện thực hiện (Conditions), hành động thực hiện (actions)
+		- Một số Conditions
+			- If the [HEADER] contains: Nếu header chứa văn bản hay biểu thức cụ thể thì actions 
+			- If the MESSAGE BODY contains Tùy chọn này biến nội dung của thân tin nhắn thành một trong các điều kiện
+			- If the MESSAGE has Attachment(s): Khi tùy chọn này được chọn, quy tắc sẽ phụ thuộc vào sự hiện diện của một hoặc nhiều tệp đính kèm tin nhắn. Không cần thông tin bổ sung.
+			- If SENDER is a member of GROUP: Điều kiện này áp dụng cho tin nhắn khi nó được gửi bởi một tài khoản là thành viên của Nhóm tài khoản được chỉ định trong quy tắc.
+			- If message is INFECTED: Điều kiện này là ĐÚNG khi MDaemon xác định rằng tin nhắn bị nhiễm vi-rút.
+		- Một số actions khi match conditions 
+			- Delete Message: Chọn hành động này sẽ khiến tin nhắn bị xóa.
+			- Move Message To Bad Message Queue: Nhấp vào hành động này để khiến tin nhắn được di chuyển đến hàng đợi tin nhắn xấu. Header X-MDBadQueue-Reason sẽ được thêm vào tin nhắn.
+			- Run Process...: Có thể sử dụng hành động này để chạy một chương trình cụ thể khi tin nhắn đáp ứng các điều kiện của quy tắc
+			- Add a warning to the top of the message...: Sử dụng hành động này nếu bạn muốn thêm một số loại cảnh báo vào đầu tin nhắn 
+			- Extract attachment and add link...: Sử dụng hành động này nếu bạn muốn trích xuất tệp đính kèm từ các tin nhắn đáp ứng các tiêu chí của quy tắc và thêm liên kết vào các tệp đó.
+		- Chi tiết các conditions và actions khác tại [đây](https://help.mdaemon.com/mdaemon/en/cf_creating_a_new_content_filter_rule.html)
+	- Sử dụng biểu thức chính quy trong rule (Using Regular Expressions in Your Filter Rules)
+		- Hệ thống Lọc nội dung hỗ trợ tìm kiếm biểu thức chính quy, đây là hệ thống đa năng giúp bạn có thể tìm kiếm không chỉ các chuỗi văn bản cụ thể mà còn cả các mẫu văn bản. Biểu thức chính quy chứa hỗn hợp văn bản thuần túy và các ký tự đặc biệt cho biết loại khớp nào cần thực hiện và do đó có thể giúp các quy tắc Bộ lọc nội dung của bạn mạnh mẽ hơn và nhắm mục tiêu tốt hơn.
+		- Metacharacters là các ký tự đặc biệt có chức năng và cách sử dụng cụ thể trong các biểu thức chính quy. Việc triển khai regexp trong hệ thống MDaemon Content Filtering cho phép các metacharacters sau:
+			`\ | () [] ^ $ * + ? . <>`
+* Spam Filter 
+	- Bộ lọc thư rác là một trong những tính năng chính trong bộ công cụ ngăn chặn thư rác mở rộng của MDaemon. Nó kết hợp các phương pháp tìm kiếm để kiểm tra các thư email đến nhằm tính toán "điểm" dựa trên hệ thống quy tắc phức tạp. Sau đó, điểm được sử dụng để xác định khả năng thư là thư rác và có thể thực hiện một số hành động nhất định dựa trên điểm đó — bạn có thể từ chối thư, đánh dấu thư là thư rác, v.v.
+	- Địa chỉ có thể được phép hoặc bị chặn hoặc được chỉ định là hoàn toàn miễn kiểm tra Bộ lọc thư rác. Bạn có thể chèn báo cáo thư rác vào thư, hiển thị điểm thư rác và cách đạt được điểm đó hoặc bạn có thể tạo báo cáo dưới dạng email riêng và đính kèm thư rác gốc dưới dạng tệp đính kèm. Ngoài ra, bạn thậm chí có thể sử dụng phương pháp học Bayesian để giúp Bộ lọc thư rác học cách xác định thư rác chính xác hơn theo thời gian, do đó tăng độ tin cậy của nó.
+	- Cuối cùng, bằng cách kiểm tra hàng nghìn thư rác đã biết, các quy tắc đã được tối ưu hóa theo thời gian và rất đáng tin cậy trong việc phát hiện dấu vân tay của thư rác. Tuy nhiên, bạn có thể tùy chỉnh hoặc thêm các quy tắc mới bằng cách chỉnh sửa các tệp cấu hình của Bộ lọc thư rác để đáp ứng nhu cầu cụ thể của mình.
+	- Bộ lọc thư rác của MDaemon sử dụng công nghệ heuristic mã nguồn mở phổ biến, tích hợp. Trang chủ của dự án mã nguồn mở là: [spamassassin](http://www.spamassassin.org)
+	![images](./images/spam-filter_spam-filter.png)
+		- Enable Spam Filter Bật Bộ lọc thư rác: Đánh dấu vào ô này để kích hoạt hệ thống chấm điểm thư theo phương pháp heuristic, lọc thư rác. Không có tùy chọn Bộ lọc thư rác nào khác trên màn hình này khả dụng cho đến khi tùy chọn này được bật.
+		- A message is spam if its score is greater or equal to [xx] (0.0-500.0): Giá trị bạn chỉ định ở đây là ngưỡng thư rác bắt buộc mà MDaemon sẽ so sánh với điểm thư rác của từng thư. Bất kỳ thư nào có điểm thư rác lớn hơn hoặc bằng số tiền này sẽ được coi là thư rác và sau đó các hành động thích hợp sẽ được thực hiện dựa trên các cài đặt Bộ lọc thư rác khác của bạn.
+		- SMTP rejects messages with scores greater or equal to [xx] (0=never):Sử dụng tùy chọn này để chỉ định ngưỡng từ chối điểm thư rác. Khi điểm thư rác của một thư lớn hơn hoặc bằng điểm này, thư sẽ bị từ chối hoàn toàn thay vì tiếp tục qua các tùy chọn còn lại và có thể được gửi đi. Giá trị của tùy chọn này luôn phải lớn hơn giá trị của tùy chọn "Một thư là thư rác nếu điểm của nó..." ở trên.
+	- Ngoài ra MDaemon còn hỗ trợ phương pháp học Bayesian, đây là một quy trình thống kê có thể tùy chọn được sử dụng để phân tích các thư rác và không phải thư rác nhằm tăng độ tin cậy của việc nhận dạng thư rác theo thời gian.	
+		![images](./images/spam-filter_bayesian.png)
+	- Các tuỳ chọn cấu hình `Allow List`
+		![images](./images/spam-filter_white-list-automatic.png)
+	- Các tuỳ chọn cấu hình `Block List`
+		![images](./images/spam-filter_black-list-by-sender.png)
+	- Cập nhật bộ lọc 
+		![images](./images/spam-filter_updates.png)
+	- Spam Honeypots (nằm tại Security » Spam Filter » Spam Honeypots) dùng để chỉ định các địa chỉ email cục bộ được thiết kế có chủ đích để thu thập thư rác. Các honeypots thư rác này không phải là tài khoản MDaemon hợp lệ hoặc bí danh địa chỉ và không bao giờ được sử dụng để gửi hoặc nhận email hợp lệ. Tuy nhiên, bằng cách đăng địa chỉ honeypot lên nhóm tin tức, danh sách gửi thư công khai hoặc nguồn khác mà những kẻ gửi thư rác thường khai thác địa chỉ, bạn sẽ bắt đầu thấy các thư đến được gửi đến các honeypots thư rác — bạn cũng có thể lấy địa chỉ từ các thư rác khác mà bạn đã nhận được được gửi đến các địa chỉ cục bộ không hợp lệ khác.
+		![images](./images/spam-honeypots.png)
+* Antivirus Filter 
+	- MDaemon có hỗ trợ antivirus filter cấu hình trong (Security » Content Filter)
+		![images](./images/content-filter_antivirus.png)
+	- Tại đây có thể cấu hình bật tắt lọc, Exclude gateways trong quá trình quét, Cấu hình Exclude, Cấu hình xử lý khi virus được phát hiện.
+	- MDaemon AntiVirus được trang bị hai công cụ quét virus: ClamAV và IKARUS Anti-Virus. Khi cả hai đều được bật, tin nhắn sẽ được quét bởi cả hai công cụ; đầu tiên là IKARUS Anti-Virus và sau đó là ClamAV. Điều này cung cấp một lớp bảo vệ bổ sung, vì một công cụ có khả năng xác định được virus trước khi định nghĩa virus của công cụ kia được cập nhật.
+* Attach Fillters 
+	- Nằm trong Content Filter 
+		![images](./images/content-filter_attachments.png)
+	- Sử dụng tab này để chỉ định các tệp đính kèm mà bạn muốn phân loại là được phép hoặc bị hạn chế. Các tệp đính kèm không được phép sẽ tự động bị xóa khỏi tin nhắn.
+	- Gồm các cấu hình handling attachments: Do not extract attachments from messages, Extract attachments and put them in account's Documents folder, Use Attachment Linking feature và Edit Attachment Linking settings
+### 2.2.8.Đổi mật khẩu account admin global, admin domain
+- Đổi mật khẩu user
+	- Click chọn User Manager để mở trình quản lý user.
+	- ![image](https://github.com/user-attachments/assets/906dfaf6-b00a-40c2-95e8-af58e21e5389)
+	- ![image](https://github.com/user-attachments/assets/6baf101d-4924-4852-81da-18b87f407e5c)
+	- ![image](https://github.com/user-attachments/assets/f1eec8dc-46df-48d0-98d0-1f1eea15e628)
