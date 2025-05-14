@@ -93,7 +93,7 @@
   - ![image](https://github.com/user-attachments/assets/81935e74-a329-428c-b22b-9a505b329a83)
   - ![image](https://github.com/user-attachments/assets/bbaca275-bd81-481c-8e8f-bc7b1b0c963e)
 ## 2.LEMP
-#### 2.1.LEMP là gì ?
+### 2.1.LEMP là gì ?
 - Tương tự như LAMP nhưng E ở đây là Nignx
 ### 2.2.Cài đặt
 - **Cài đặt Nginx**
