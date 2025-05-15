@@ -360,6 +360,14 @@
 | `node_boot_time_seconds` | Thời gian hệ thống được khởi động |
 | `node_uname_info` | Thông tin nhân hệ điều hành |
 
+- ![image](https://github.com/user-attachments/assets/2d692874-4fd7-435e-9d49-784c3bd0abc1)
+- ![image](https://github.com/user-attachments/assets/11203bef-31c1-466d-aef8-a0fed3d5988e)
+- ![image](https://github.com/user-attachments/assets/1ae801e7-cd97-42a8-8eed-7bdecb7e464a)
+- ![image](https://github.com/user-attachments/assets/671d827b-4338-4076-9026-7b8ceff59022)
+- ![image](https://github.com/user-attachments/assets/7eac4a06-131e-4521-83fb-a264c3738498)
+- ![image](https://github.com/user-attachments/assets/7adb949b-2600-4c53-9eeb-f730ca80a7fe)
+- ![image](https://github.com/user-attachments/assets/f94fda38-abac-47c7-908c-1349ea8df05c)
+- ![image](https://github.com/user-attachments/assets/cac50af5-5de3-4409-b491-591f71720fb8)
 - ![image](https://github.com/user-attachments/assets/faeb25c4-330f-4c9e-9f14-b1b02997e807)
   
 # 4.Monitor MySQL
