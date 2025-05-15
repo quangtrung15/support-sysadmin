@@ -72,6 +72,10 @@
 - `sudo nano /etc/exports`
 - ![image](https://github.com/user-attachments/assets/519fde7f-8529-4d52-81e5-6fcc4c69adb9)
 - ![image](https://github.com/user-attachments/assets/d17b282b-f77c-4d20-bcab-80bcf421f315)
+- rw (read-write): Cho phép máy khách truy cập thư mục được chia sẻ ở chế độ đọc và ghi. Điều này có nghĩa là máy khách có thể đọc các tệp hiện có và tạo, sửa đổi hoặc xóa các tệp mới
+- sync: Yêu cầu máy chủ NFS ghi tất cả các thay đổi vào đĩa ngay lập tức sau khi chúng được thực hiện. Điều này đảm bảo rằng dữ liệu được đồng bộ hóa và giảm nguy cơ mất dữ liệu trong trường hợp máy chủ NFS bị lỗi.
+- no_root_squash: Cho phép người dùng root trên máy khách truy cập các tệp với quyền root trên máy chủ NFS. Theo mặc định, NFS sẽ ánh xạ người dùng root trên máy khách thành người dùng nobody hoặc bất kỳ người dùng nào không có đặc quyền trên máy chủ NFS để tăng cường bảo mật. Tùy chọn này vô hiệu hóa hành vi mặc định đó.
+- no_subtree_check: Tắt kiểm tra cây con, một tính năng bảo mật được thiết kế để ngăn chặn các vòng lặp vô hạn xảy ra khi một thư mục được chia sẻ được gắn kết bên trong chính nó. Tuy nhiên, việc vô hiệu hóa kiểm tra cây con có thể có những rủi ro về bảo mật, vì vậy nó chỉ nên được sử dụng khi cần thiết và nếu bạn hiểu rõ những rủi ro liên quan.
 - Khởi động lại dịch vụ để áp dụng cấu hình
 - `sudo systemctl restart nfs-server`
 - ![image](https://github.com/user-attachments/assets/fb8f91da-9627-4b1b-9c06-412995f6e1a4)
