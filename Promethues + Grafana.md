@@ -107,7 +107,7 @@
 - ![image](https://github.com/user-attachments/assets/e090e7e3-ea98-45ed-ab6b-280fd80d2eb8)
 - Khi Prometheus chạy thành công, bạn có thể truy cập nó thông qua trình duyệt web bằng cách sử dụng localhost:9090 hoặc <ip_address>:9090
 - ![image](https://github.com/user-attachments/assets/abfca9f7-5f30-4731-bc50-f57c07e3cdb0)
-### 2.22.Cài đặt và cấu hình Node Exporter
+## 2.2.Cài đặt và cấu hình Node Exporter
 - Tạo người dùng hệ thống cho Node Exporter bằng lệnh sau
 - ```
   sudo useradd \ 
@@ -170,7 +170,7 @@
 - `sudo ufw allow 9100/tcp`
 - Truy cập:
 - `http://192.168.88.142:9100/metrics`
-### 2.33.Cài đặt Prometheus MySQL Exporter
+## 2.3.Cài đặt Prometheus MySQL Exporter
 - Bước 1: Thêm người dùng và nhóm hệ thống Prometheus
 - ```
   sudo groupadd --system prometheus
@@ -252,7 +252,7 @@
 - ![image](https://github.com/user-attachments/assets/08e5f04c-9a3a-45aa-a6ad-c28849a66163)
 #### Tài liệu tham khảo
 - https://computingforgeeks.com/install-and-configure-prometheus-mysql-exporter-on-ubuntu-centos/
-### 2.4.Nguồn tài liệu tham khảo: 
+## 2.4.Nguồn tài liệu tham khảo: 
 - https://medium.com/@ranjith_99360/how-to-install-prometheus-on-ubuntu-22-04-e036e0e101cc
 - https://medium.com/@vishnurajlegna/2023-effortless-setup-of-prometheus-node-exporter-and-grafana-on-aws-ec2-ubuntu-22-04-f65d62dd39aa
 
@@ -311,7 +311,7 @@
 ### 2.5.2.Tài liệu tham khảo
 - https://www.cherryservers.com/blog/install-grafana-ubuntu#what-is-grafana
 
-## 3.Monitor Linux Server
+# 3.Monitor Linux Server
 - Có thể monitor server Linux thông qua metric của node_exporter
 - Bảng các metric phổ biến để monitor
 - CPU Metrics
@@ -362,7 +362,7 @@
 
 - ![image](https://github.com/user-attachments/assets/faeb25c4-330f-4c9e-9f14-b1b02997e807)
   
-## 4.Monitor MySQL
+# 4.Monitor MySQL
 - MySQL Exporter Metrics
 
 - Connection & Threads
