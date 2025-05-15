@@ -57,7 +57,7 @@ MDaemon có những tính năng nổi bật như sau.
   - ![image](https://github.com/user-attachments/assets/1fb0492a-e132-4e52-813b-74b694fe31ee)
   - ![image](https://github.com/user-attachments/assets/32e79e25-d3fb-4dde-b266-1586c6e3e41c)
 - Enduser
-  - Truy cập web mail tại http://mail.qtrung.com/
+  - Truy cập web mail tại https://mail.qtrung.com/
   - ![image](https://github.com/user-attachments/assets/1c491ac8-1427-4d91-aff1-a0006735b571)
 ### 2.2.2 Các port cần thiết được sử dụng trên email server Mdaemon
 - ```bash
