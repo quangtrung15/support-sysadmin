@@ -126,6 +126,26 @@
 - `sudo mv node_exporter-1.6.1.linux-amd64/node_exporter /usr/local/bin/`
 - Tạo dịch vụ systemd cho Node Exporter
 - `sudo nano /etc/systemd/system/node_exporter.service`
+- ```bash
+  [Unit]
+  Description=Node Exporter
+  Wants=network-online.target
+  After=network-online.target
+  
+  [Service]
+  User=node_exporter
+  Group=node_exporter
+  Type=simple
+  ExecStart=/usr/local/bin/node_exporter
+  Restart=always
+  RestartSec=3
+  ProtectSystem=full
+  ProtectHome=yes
+  NoNewPrivileges=true
+  
+  [Install]
+  WantedBy=multi-user.target
+  ```
 - ![image](https://github.com/user-attachments/assets/7d35f67d-58f2-4f08-823f-8a1ee5af8473)
 - Kích hoạt và khởi động Node Exporter
 - `sudo systemctl enable node_exporter`
