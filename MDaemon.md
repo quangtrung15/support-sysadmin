@@ -152,7 +152,7 @@ MDaemon có những tính năng nổi bật như sau.
 - Tại phần Others -> Password đây là nơi cấu hình chính sách mật khẩu
 - ![image](https://github.com/user-attachments/assets/7d4f0518-356d-45d7-bc2d-a3d2ca3338cf)
 ### 2.2.5 Thiết lập chữ ký email
-- Truy cập web mail tại http://mail.qtrung.com/ Chọn icon bánh răng góc trên bên phải
+- Truy cập web mail tại https://mail.qtrung.com/ Chọn icon bánh răng góc trên bên phải
 - ![image](https://github.com/user-attachments/assets/810b9c29-a73b-43df-8ef6-3361e150f42f)
 - ![image](https://github.com/user-attachments/assets/87fd6f12-f0bc-4c3e-9a5a-e30fff87e15e)
 - ![image](https://github.com/user-attachments/assets/495163f7-63e8-496c-842b-aa6dd83e0500)
