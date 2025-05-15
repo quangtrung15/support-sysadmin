@@ -9,7 +9,7 @@
 - Grafana là một ứng dụng web phân tích và trực quan hóa tương tác mã nguồn mở phổ biến được thiết kế để giám sát và trực quan hóa dữ liệu và tạo bảng điều khiển tương tác. Nó cho phép bạn truy vấn dữ liệu và xây dựng biểu đồ, biểu đồ và bảng điều khiển của dữ liệu (số liệu & nhật ký) từ nhiều nguồn dữ liệu được hỗ trợ, giúp việc diễn giải và hiểu dữ liệu dễ dàng hơn.
 - Grafana cho phép bạn tạo bảng thông tin tương tác và hấp dẫn về mặt hình ảnh để trực quan hóa dữ liệu, tương tự như Tableau hoặc các đối thủ cạnh tranh của nó . Nó cho phép theo dõi thời gian thực nhiều nguồn dữ liệu khác nhau, ví dụ, để theo dõi cụm Kubernetes và hỗ trợ phân tích dữ liệu chuyên sâu, cung cấp thông tin chi tiết về hiệu suất hệ thống của bạn. Điều này có thể giúp bạn đưa ra quyết định sáng suốt hơn. Grafana cũng cho phép bạn thiết lập cảnh báo dựa trên các điều kiện được xác định trước, thông báo cho bạn về các sự cố trước khi chúng trở thành vấn đề.
 
-# 2.Cài đặtđặt
+# 2.Cài đặt
 ## 2.1.Promethues
 ### 2.1.1.Cài đặt Promethues
 - Bước 1 — Cập nhật các gói hệ thống
