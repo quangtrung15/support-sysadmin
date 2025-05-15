@@ -329,7 +329,40 @@
 | `node_memory_MemTotal_bytes` | Tổng dung lượng RAM |
 | `node_memory_MemAvailable_bytes` | RAM khả dụng (free + cached + buffers) |
 | `node_memory_MemFree_bytes` | RAM còn trống thực sự |
-| `node_memory_Buffers_byt4.Monitor MySQL
+| `node_memory_Buffers_bytes` | RAM dùng làm buffer |
+| `node_memory_Cached_bytes` | RAM dùng làm cache |
+| `node_memory_SwapTotal_bytes` | Tổng dung lượng swap |
+| `node_memory_SwapFree_bytes` | Swap còn trống |
+
+- Disk Metrics
+
+| Metric | Ý nghĩa |
+|--------|---------|
+| `node_filesystem_size_bytes` | Tổng dung lượng ổ đĩa |
+| `node_filesystem_avail_bytes` | Dung lượng ổ đĩa còn trống |
+| `node_disk_read_bytes_total` | Tổng số byte đã đọc từ đĩa |
+| `node_disk_written_bytes_total` | Tổng số byte đã ghi vào đĩa |
+
+- Network Metrics
+
+| Metric | Ý nghĩa |
+|--------|---------|
+| `node_network_receive_bytes_total` | Tổng số byte đã nhận qua mạng |
+| `node_network_transmit_bytes_total` | Tổng số byte đã gửi đi qua mạng |
+| `node_network_receive_errs_total` | Tổng lỗi nhận |
+| `node_network_transmit_errs_total` | Tổng lỗi gửi |
+
+- System Metrics
+
+| Metric | Ý nghĩa |
+|--------|---------|
+| `node_time_seconds` | Thời gian hệ thống hiện tại (Unix timestamp) |
+| `node_boot_time_seconds` | Thời gian hệ thống được khởi động |
+| `node_uname_info` | Thông tin nhân hệ điều hành |
+
+- ![image](https://github.com/user-attachments/assets/faeb25c4-330f-4c9e-9f14-b1b02997e807)
+  
+## 2.4.Monitor MySQL
 - MySQL Exporter Metrics
 
 - Connection & Threads
