@@ -170,66 +170,7 @@
 - `sudo ufw allow 9100/tcp`
 - Truy cập:
 - `http://192.168.88.142:9100/metrics`
-### 2.1.4.Nguồn tài liệu tham khảo: 
-- https://medium.com/@ranjith_99360/how-to-install-prometheus-on-ubuntu-22-04-e036e0e101cc
-- https://medium.com/@vishnurajlegna/2023-effortless-setup-of-prometheus-node-exporter-and-grafana-on-aws-ec2-ubuntu-22-04-f65d62dd39aa
-
-## 2.2.Grafana
-### 2.2.1.Cài đặt Grafana
-- Bước 1 - Cập nhật và nâng cấp
-- `sudo apt update -y && sudo apt upgrade -y`
-- ![image](https://github.com/user-attachments/assets/a759aa5a-c63c-4adb-966b-83f283e96451)
-- Bước 2 - Cài đặt các gói cần thiết
-- `sudo apt install -y apt-transport-https software-properties-common wget`
-- ![image](https://github.com/user-attachments/assets/003bd6f4-d80a-4fc5-a5ab-d7e0f7108ac3)
-- Bước 3 - Thêm khóa Grafana GPG
-- ```
-  sudo mkdir -p /etc/apt/keyrings/
-  wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
-  ```
-- ![image](https://github.com/user-attachments/assets/972e209c-4e8a-44f8-91bb-bb293e4be4cd)
-- Bước 4 - Thêm kho lưu trữ Grafana APT
-- `echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list`
-- ![image](https://github.com/user-attachments/assets/c4a99c02-93e6-41ba-9b8e-19631d7ef94f)
-- Sau khi thêm kho lưu trữ vào hệ thống, hãy cập nhật chỉ mục gói để bao gồm thông tin từ kho lưu trữ mới được thêm vào bằng cách sử dụng:
-- `sudo apt update`
-- Bước 5 - Cài đặt Grafana
-- `sudo apt install grafana`
-- ![image](https://github.com/user-attachments/assets/a9fefd2d-f38d-4127-ab5a-a071c11b64fb)
-- Bước 6 - Khởi động dịch vụ Grafana
-- Sau khi quá trình cài đặt Grafana hoàn tất, bạn có thể xác minh phiên bản bằng cách sử dụng:
-- `sudo grafana-server -v`
-- ![image](https://github.com/user-attachments/assets/9bca64f3-c9c4-4e8f-9c61-6878c90e4be6)
-- Tiếp theo, hãy khởi động dịch vụ Grafana và cho phép nó tự động khởi động khi khởi động lại hệ thống bằng các lệnh sau:
-- ```
-  sudo systemctl start grafana-server
-  sudo systemctl enable grafana-server
-  ```
-- ![image](https://github.com/user-attachments/assets/30c95331-62a5-40d0-9d84-bd7d40df9fb2)
-- Bước 7 - Xác minh rằng dịch vụ Grafana đang chạy
-- `sudo systemctl status grafana-server`
-- ![image](https://github.com/user-attachments/assets/2849d280-d069-4fba-ace3-5d9a04db7638)
-- ![image](https://github.com/user-attachments/assets/27aed3b9-423c-451d-80d6-820abe54e09a)
-- Bước 8 - Mở cổng trong tường lửa
-- Cổng 3000 là cổng mặc định của Grafana cho giao diện web của nó. Để cho phép truy cập bên ngoài vào Grafana, bạn phải bật tường lửa và mở cổng 3000. Để thực hiện việc này, hãy thực hiện các lệnh sau trong terminal của bạn:
-- ```
-  sudo ufw enable 
-  sudo ufw allow ssh
-  sudo ufw allow 3000/tcp
-  ```
-- ![image](https://github.com/user-attachments/assets/60a292a9-ef1a-4945-9228-7c1c29199049)
-- Bước 9 - Truy cập vào giao diện web Grafana
-- `http://your_server_IP:3000`
-- ![image](https://github.com/user-attachments/assets/e3e3c01c-5998-47de-9eeb-88f39881c97e)
-- Tên người dùng: admin
-- Mật khẩu: admin
-- Sau khi đăng nhập thay đổi mật khẩu
-- ![image](https://github.com/user-attachments/assets/f6bf74f6-ce26-462a-b94b-735d3e4be509)
-- ![image](https://github.com/user-attachments/assets/69e562dd-15cb-49d7-a739-7a8d198941f1)
-### 2.2.2.Tài liệu tham khảo
-- https://www.cherryservers.com/blog/install-grafana-ubuntu#what-is-grafana
-
-## 2.3.Cài đặt Prometheus MySQL Exporter
+### 2.1.4.Cài đặt Prometheus MySQL Exporter
 - Bước 1: Thêm người dùng và nhóm hệ thống Prometheus
 - ```
   sudo groupadd --system prometheus
@@ -309,10 +250,68 @@
   ```
 - ![image](https://github.com/user-attachments/assets/86fe9f6a-3666-4f93-adc6-e54be76419ce)
 - ![image](https://github.com/user-attachments/assets/08e5f04c-9a3a-45aa-a6ad-c28849a66163)
-### Tài liệu tham khảo 
+#### Tài liệu tham khảo
 - https://computingforgeeks.com/install-and-configure-prometheus-mysql-exporter-on-ubuntu-centos/
+### 2.1.5.Nguồn tài liệu tham khảo: 
+- https://medium.com/@ranjith_99360/how-to-install-prometheus-on-ubuntu-22-04-e036e0e101cc
+- https://medium.com/@vishnurajlegna/2023-effortless-setup-of-prometheus-node-exporter-and-grafana-on-aws-ec2-ubuntu-22-04-f65d62dd39aa
 
-## 2.4.Monitor Linux Server
+## 2.2.Grafana
+### 2.2.1.Cài đặt Grafana
+- Bước 1 - Cập nhật và nâng cấp
+- `sudo apt update -y && sudo apt upgrade -y`
+- ![image](https://github.com/user-attachments/assets/a759aa5a-c63c-4adb-966b-83f283e96451)
+- Bước 2 - Cài đặt các gói cần thiết
+- `sudo apt install -y apt-transport-https software-properties-common wget`
+- ![image](https://github.com/user-attachments/assets/003bd6f4-d80a-4fc5-a5ab-d7e0f7108ac3)
+- Bước 3 - Thêm khóa Grafana GPG
+- ```
+  sudo mkdir -p /etc/apt/keyrings/
+  wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+  ```
+- ![image](https://github.com/user-attachments/assets/972e209c-4e8a-44f8-91bb-bb293e4be4cd)
+- Bước 4 - Thêm kho lưu trữ Grafana APT
+- `echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list`
+- ![image](https://github.com/user-attachments/assets/c4a99c02-93e6-41ba-9b8e-19631d7ef94f)
+- Sau khi thêm kho lưu trữ vào hệ thống, hãy cập nhật chỉ mục gói để bao gồm thông tin từ kho lưu trữ mới được thêm vào bằng cách sử dụng:
+- `sudo apt update`
+- Bước 5 - Cài đặt Grafana
+- `sudo apt install grafana`
+- ![image](https://github.com/user-attachments/assets/a9fefd2d-f38d-4127-ab5a-a071c11b64fb)
+- Bước 6 - Khởi động dịch vụ Grafana
+- Sau khi quá trình cài đặt Grafana hoàn tất, bạn có thể xác minh phiên bản bằng cách sử dụng:
+- `sudo grafana-server -v`
+- ![image](https://github.com/user-attachments/assets/9bca64f3-c9c4-4e8f-9c61-6878c90e4be6)
+- Tiếp theo, hãy khởi động dịch vụ Grafana và cho phép nó tự động khởi động khi khởi động lại hệ thống bằng các lệnh sau:
+- ```
+  sudo systemctl start grafana-server
+  sudo systemctl enable grafana-server
+  ```
+- ![image](https://github.com/user-attachments/assets/30c95331-62a5-40d0-9d84-bd7d40df9fb2)
+- Bước 7 - Xác minh rằng dịch vụ Grafana đang chạy
+- `sudo systemctl status grafana-server`
+- ![image](https://github.com/user-attachments/assets/2849d280-d069-4fba-ace3-5d9a04db7638)
+- ![image](https://github.com/user-attachments/assets/27aed3b9-423c-451d-80d6-820abe54e09a)
+- Bước 8 - Mở cổng trong tường lửa
+- Cổng 3000 là cổng mặc định của Grafana cho giao diện web của nó. Để cho phép truy cập bên ngoài vào Grafana, bạn phải bật tường lửa và mở cổng 3000. Để thực hiện việc này, hãy thực hiện các lệnh sau trong terminal của bạn:
+- ```
+  sudo ufw enable 
+  sudo ufw allow ssh
+  sudo ufw allow 3000/tcp
+  ```
+- ![image](https://github.com/user-attachments/assets/60a292a9-ef1a-4945-9228-7c1c29199049)
+- Bước 9 - Truy cập vào giao diện web Grafana
+- `http://your_server_IP:3000`
+- ![image](https://github.com/user-attachments/assets/e3e3c01c-5998-47de-9eeb-88f39881c97e)
+- Tên người dùng: admin
+- Mật khẩu: admin
+- Sau khi đăng nhập thay đổi mật khẩu
+- ![image](https://github.com/user-attachments/assets/f6bf74f6-ce26-462a-b94b-735d3e4be509)
+- ![image](https://github.com/user-attachments/assets/69e562dd-15cb-49d7-a739-7a8d198941f1)
+### 2.2.2.Tài liệu tham khảo
+- https://www.cherryservers.com/blog/install-grafana-ubuntu#what-is-grafana
+
+## 2.3.Monitor Linux Server
 - Có thể monitor server Linux thông qua metric của node_exporter
 - Bảng các metric phổ biến để monitor
 - CPU Metrics
@@ -330,40 +329,7 @@
 | `node_memory_MemTotal_bytes` | Tổng dung lượng RAM |
 | `node_memory_MemAvailable_bytes` | RAM khả dụng (free + cached + buffers) |
 | `node_memory_MemFree_bytes` | RAM còn trống thực sự |
-| `node_memory_Buffers_bytes` | RAM dùng làm buffer |
-| `node_memory_Cached_bytes` | RAM dùng làm cache |
-| `node_memory_SwapTotal_bytes` | Tổng dung lượng swap |
-| `node_memory_SwapFree_bytes` | Swap còn trống |
-
-- Disk Metrics
-
-| Metric | Ý nghĩa |
-|--------|---------|
-| `node_filesystem_size_bytes` | Tổng dung lượng ổ đĩa |
-| `node_filesystem_avail_bytes` | Dung lượng ổ đĩa còn trống |
-| `node_disk_read_bytes_total` | Tổng số byte đã đọc từ đĩa |
-| `node_disk_written_bytes_total` | Tổng số byte đã ghi vào đĩa |
-
-- Network Metrics
-
-| Metric | Ý nghĩa |
-|--------|---------|
-| `node_network_receive_bytes_total` | Tổng số byte đã nhận qua mạng |
-| `node_network_transmit_bytes_total` | Tổng số byte đã gửi đi qua mạng |
-| `node_network_receive_errs_total` | Tổng lỗi nhận |
-| `node_network_transmit_errs_total` | Tổng lỗi gửi |
-
-- System Metrics
-
-| Metric | Ý nghĩa |
-|--------|---------|
-| `node_time_seconds` | Thời gian hệ thống hiện tại (Unix timestamp) |
-| `node_boot_time_seconds` | Thời gian hệ thống được khởi động |
-| `node_uname_info` | Thông tin nhân hệ điều hành |
-
-- ![image](https://github.com/user-attachments/assets/faeb25c4-330f-4c9e-9f14-b1b02997e807)
-
-## 2.5.Monitor MySQL
+| `node_memory_Buffers_byt4.Monitor MySQL
 - MySQL Exporter Metrics
 
 - Connection & Threads
