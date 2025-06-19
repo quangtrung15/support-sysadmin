@@ -73,10 +73,14 @@
     ```
   - ![image](https://github.com/user-attachments/assets/0cd6277b-8b82-41ac-95ef-f83575dd3e9c)
   - Tạo file cấu hình WordPress
-  - ```bash
-    sudo cp wp-config-sample.php wp-config.php
-    ```
-  - ![image](https://github.com/user-attachments/assets/a054a5ee-f980-45b2-972d-4084cfe58196)
+    - Di chuyển vào thư mục /var/www/html
+    - ```bash
+      cd /var/www/html
+      ``` 
+    - ```bash
+      sudo cp wp-config-sample.php wp-config.php
+      ```
+    - ![image](https://github.com/user-attachments/assets/a054a5ee-f980-45b2-972d-4084cfe58196)
   - Sửa wp-config.php
   - ```bash
     sudo nano wp-config.php
