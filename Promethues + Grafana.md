@@ -247,11 +247,11 @@
   ```
 - ![image](https://github.com/user-attachments/assets/86fe9f6a-3666-4f93-adc6-e54be76419ce)
 - ![image](https://github.com/user-attachments/assets/08e5f04c-9a3a-45aa-a6ad-c28849a66163)
-#### Tài liệu tham khảo
-- https://computingforgeeks.com/install-and-configure-prometheus-mysql-exporter-on-ubuntu-centos/
+
 ## 2.4.Nguồn tài liệu tham khảo: 
 - https://medium.com/@ranjith_99360/how-to-install-prometheus-on-ubuntu-22-04-e036e0e101cc
 - https://medium.com/@vishnurajlegna/2023-effortless-setup-of-prometheus-node-exporter-and-grafana-on-aws-ec2-ubuntu-22-04-f65d62dd39aa
+- - https://computingforgeeks.com/install-and-configure-prometheus-mysql-exporter-on-ubuntu-centos/
 
 ## 2.5.Grafana
 ### 2.5.1.Cài đặt Grafana
