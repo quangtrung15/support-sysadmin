@@ -124,19 +124,53 @@
   - Nginx không dùng mod_php như Apache, mà dùng PHP-FPM (FastCGI Process Manager)
   - `sudo apt install php-fpm php-mysql`
 - **Cấu hình Nginx để xử lý file PHP
-  - `sudo nano /etc/nginx/sites-available/default`
-  - ![image](https://github.com/user-attachments/assets/31ffd0e9-4599-406e-a16c-be879d0fb2c3)
-  - Thêm (hoặc sửa) đoạn sau trong server { ... }:
+  - Xóa sites-available mặc định
+    - `sudo rm /etc/nginx/sites-available/default`
+    - `sudo rm /etc/nginx/sites-enabled/default`
+  - Tạo thư mục
+    - ```bash
+      mkdir /var/www/example.com
+      ```
+    - ```bash
+      sudo chown -R www-data:www-data /var/www/example.com
+      sudo chmod -R 755 /var/www/example.com
+      ```
+  - Di chuyển wordpress 
+    - ```bash
+      sudo cp -r /tmp/wordpress/* /var/www/example.com
+      ```
+  - Tạo sites-available
+    - ```bash
+      sudo nano /etc/nginx/sites-available/example.com
+      ```
+    - ```bash
+      server {
+          listen 80;
+          server_name localhost;
+      
+          root /var/www/example.com;
+          index index.php index.html;
+      
+          location / {
+              try_files $uri $uri/ /index.php?$args;
+          }
+      
+          location ~ \.php$ {
+              include snippets/fastcgi-php.conf;
+              fastcgi_pass unix:/var/run/php/php8.1-fpm.sock; # tùy version PHP bạn cài
+          }
+      
+          location ~ /\.ht {
+              deny all;
+          }
+      }
+      ```
   - ```bash
-    location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php8.1-fpm.sock;  # tùy phiên bản PHP
-    }
+    sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+    sudo nginx -t
+    sudo systemctl restart nginx
     ```
-  - Kiểm tra cấu hình
-  - `sudo nginx -t`
-  - `sudo systemctl restart nginx`
-  - 
+
 ## 3.Bash Script với LAMP/LEMP
 ### 3.1.Bash Script với LAMP
 - Việc viết bash script cài đặt LAMP là để tự động hóa toàn bộ quá trình cài đặt Linux, Apache, MySQL, PHP thay vì làm thủ công từng lệnh.
