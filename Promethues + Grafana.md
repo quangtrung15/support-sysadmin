@@ -174,7 +174,13 @@
   sudo useradd -s /sbin/nologin --system -g prometheus prometheus
   ```
 - Bước 2: Cài đặt Prometheus MySQL Exporter
-- `curl -s https://api.github.com/repos/prometheus/mysqld_exporter/releases/latest   | grep browser_download_url | grep linux-amd64 |  cut -d '"' -f 4 | wget -qi `
+- ```bash
+  curl -s https://api.github.com/repos/prometheus/mysqld_exporter/releases/latest \
+  | grep browser_download_url \
+  | grep linux-amd64 \
+  | cut -d '"' -f 4 \
+  | wget -qi -
+  ```
 - ![image](https://github.com/user-attachments/assets/94253a7c-2fba-420f-beef-4cfd579293d7)
 - Giải nén file sau khi tải xuống
 - `tar xvf mysqld_exporter-*.linux-amd64.tar.gz`
@@ -251,7 +257,7 @@
 ## 2.4.Nguồn tài liệu tham khảo: 
 - https://medium.com/@ranjith_99360/how-to-install-prometheus-on-ubuntu-22-04-e036e0e101cc
 - https://medium.com/@vishnurajlegna/2023-effortless-setup-of-prometheus-node-exporter-and-grafana-on-aws-ec2-ubuntu-22-04-f65d62dd39aa
-- - https://computingforgeeks.com/install-and-configure-prometheus-mysql-exporter-on-ubuntu-centos/
+- https://computingforgeeks.com/install-and-configure-prometheus-mysql-exporter-on-ubuntu-centos/
 
 ## 2.5.Grafana
 ### 2.5.1.Cài đặt Grafana
