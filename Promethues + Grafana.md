@@ -70,22 +70,22 @@
 - Bao gồm các thiết lập này vào tệp, lưu và thoát:
 - ```
   [Unit]
-  Description=Prometheus
-  Wants=network-online.target
-  After=network-online.target
+    Description=Prometheus
+    Wants=network-online.target
+    After=network-online.target
 
   [Service]
-  User=prometheus
-  Group=prometheus
-  Type=simple
-  ExecStart=/usr/local/bin/prometheus \
-      --config.file /etc/prometheus/prometheus.yml \
-      --storage.tsdb.path /var/lib/prometheus/ \
-      --web.console.templates=/etc/prometheus/consoles \
-      --web.console.libraries=/etc/prometheus/console_libraries
+    User=prometheus
+    Group=prometheus
+    Type=simple
+    ExecStart=/usr/local/bin/prometheus \
+        --config.file /etc/prometheus/prometheus.yml \
+        --storage.tsdb.path /var/lib/prometheus/ \
+        --web.console.templates=/etc/prometheus/consoles \
+        --web.console.libraries=/etc/prometheus/console_libraries
   
   [Install]
-  WantedBy=multi-user.target
+    WantedBy=multi-user.target
   ```
 - ![image](https://github.com/user-attachments/assets/0e2c612f-5715-4acc-b207-499104d9313b)
 - Bước 4 — Tải lại Systemd
@@ -109,11 +109,8 @@
 - ![image](https://github.com/user-attachments/assets/abfca9f7-5f30-4731-bc50-f57c07e3cdb0)
 ## 2.2.Cài đặt và cấu hình Node Exporter
 - Tạo người dùng hệ thống cho Node Exporter bằng lệnh sau
-- ```
-  sudo useradd \ 
-    --system \ 
-    --no-create-home \ 
-    --shell /bin/false node_exporter
+- ```bash
+  sudo useradd --system --no-create-home --shell /bin/false node_exporter
   ```
 - ![image](https://github.com/user-attachments/assets/4100eafb-62f4-435f-a8ba-4e3d4f853627)
 - Tải xuống và cài đặt Node Exporter
@@ -128,23 +125,23 @@
 - `sudo nano /etc/systemd/system/node_exporter.service`
 - ```bash
   [Unit]
-  Description=Node Exporter
-  Wants=network-online.target
-  After=network-online.target
+    Description=Node Exporter
+    Wants=network-online.target
+    After=network-online.target
   
   [Service]
-  User=node_exporter
-  Group=node_exporter
-  Type=simple
-  ExecStart=/usr/local/bin/node_exporter
-  Restart=always
-  RestartSec=3
-  ProtectSystem=full
-  ProtectHome=yes
-  NoNewPrivileges=true
+    User=node_exporter
+    Group=node_exporter
+    Type=simple
+    ExecStart=/usr/local/bin/node_exporter
+    Restart=always
+    RestartSec=3
+    ProtectSystem=full
+    ProtectHome=yes
+    NoNewPrivileges=true
   
   [Install]
-  WantedBy=multi-user.target
+    WantedBy=multi-user.target
   ```
 - ![image](https://github.com/user-attachments/assets/7d35f67d-58f2-4f08-823f-8a1ee5af8473)
 - Kích hoạt và khởi động Node Exporter
