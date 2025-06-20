@@ -251,6 +251,14 @@
   sudo systemctl enable mysql_exporter
   sudo systemctl start mysql_exporter
   ```
+- Mở sudo nano /etc/prometheus/prometheus.yml
+- Thêm 
+- ```bash
+    - job_name: 'mysql'
+    static_configs:
+      - targets: ['localhost:9104']
+  ```
+- ![image](https://github.com/user-attachments/assets/c8306dbc-3890-47c2-ac9d-78d2e91ae391)
 - ![image](https://github.com/user-attachments/assets/86fe9f6a-3666-4f93-adc6-e54be76419ce)
 - ![image](https://github.com/user-attachments/assets/08e5f04c-9a3a-45aa-a6ad-c28849a66163)
 
