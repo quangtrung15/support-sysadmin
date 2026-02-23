@@ -2,9 +2,9 @@
 ## 1.2.Khái niệm
 - Logical Volume Manager (LVM) : LVM là kỹ thuật quản lý việc thay đổi kích thước lưu trữ của ổ cứng. Là một phương pháp ấn định không gian ổ đĩa thành những logicalvolume khiến cho việc thay đổi kích thước của một phân vùng trở nên dễ dàng. Điều này thật dễ dàng khi bạn muốn quản lý công việc của mình tại riêng một phân vùng mà muốn mở rộng nó ra lớn hơn.
 - Một số khái niệm liên quan:
-+ Physical volume: là một đĩa cứng vật lý hoặc là partition
-+ Volume group: là một nhóm các physical volume ( ổ đĩa ảo )
-+ logical volume: là các phân vùng ảo của ổ đĩa ảo
+  + Physical volume: là một đĩa cứng vật lý hoặc là partition
+  + Volume group: là một nhóm các physical volume ( ổ đĩa ảo )
+  + logical volume: là các phân vùng ảo của ổ đĩa ảo
 - Một số lệnh cần thiết:
 + Lệnh fdisk : Dùng để quản lý việc phân vùng trong ổ cứng. Là một công cụ hữu dụng tron linux 
 + Lệnh mount : Dùng để gắn một phân vùng vào thư mục root để có thể sử dụng được nó
